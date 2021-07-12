@@ -2,6 +2,7 @@ import './App.css';
 
 export default function App() {
     return (
+      <div className="body">
       <div className="App">
       <div className="row current-weather">
         <h1 id="new-city" className="capitalize">
@@ -51,6 +52,8 @@ export default function App() {
           </ul>
         </div>
       </div>
+      </div>
+      <a href="https://github.com/metvor/react-week-4" target="_blank" rel="noreferrer">Open source code</a>
       </div>
   );
 }
