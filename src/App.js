@@ -1,25 +1,57 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+export default function App() {
+    return (
+      <div className="App">
+      <div className="row current-weather">
+        <h1 id="new-city" className="capitalize">
+          London
+        </h1>
+        <div className="col-6 text">
+          <ul>
+            <li>Updated 19:10</li>
+            <li id="display-weather-description" className="capitalize">
+              Cloudy
+            </li>
+          </ul>
+          <div id="weather-today">
+            <img id="weather-icon-today" src="/02d.svg" alt="weather icon" />
+            <span id="temperature">11</span>°C
+          </div>
+        </div>
+        <div className="col-6 weather-spec">
+          <ul>
+            <li>
+              <img
+                className="weather-spec-icons spec-text"
+                src="/thermometer.svg"
+                alt="thermometer icon"
+              />
+              <span className="spec-text-hide">Feels like </span>
+              <span id="feels-like-temp">10</span>°C
+            </li>
+            <li>
+              <img
+                src="/raindrop.svg"
+                alt="waterdrop icon"
+                className="weather-spec-icons spec-text"
+              />
+              <span className="spec-text-hide">Chance of rain </span>
+              <span id="precipitation">70</span>%
+            </li>
+            <li>
+              <img
+                className="weather-spec-icons spec-text"
+                src="./icons/windsock.svg"
+                alt="windsock icon"
+              />
+              <span className="spec-text-hide">Wind speed </span>
+              <span id="wind">5</span> m/s
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
   );
 }
 
-export default App;
